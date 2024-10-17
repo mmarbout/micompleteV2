@@ -14,7 +14,7 @@ in HMM format can be provided to also retrieve completeness and redundancy of th
 weighted versions of completeness and redundancy which can inform the user a bit more of the actual state completeness (see description). Alternatively, the user can calculate new weights for any given set
 of marker genes provided.
 
-miCompleteV2 is still in a state of development, bugs may be encountered. Feedback, bug reports, and feature requests are welcome through Bitbucket's
+miComplete V2 is still in a state of development, bugs may be encountered. Feedback, bug reports, and feature requests are welcome through Bitbucket's
 `issue system <https://github.com/mmarbout/micompleteV2/issues>`_.
 
 
