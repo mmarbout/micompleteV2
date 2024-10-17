@@ -1,4 +1,4 @@
-# micomplete V2
+# micomplete Version 2
 updated version of micomplete that allow to be compatible with the lateste version of MetaTOR and to use Biopython v1.80 or higher
 
 the original package can be found here <https://bitbucket.org/evolegiolab/micomplete/>
