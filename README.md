@@ -11,6 +11,6 @@ after installing Metator following the instruction on the github page
 
 you will have to install the up-to-date version of micomplete
 
-‘‘‘sh
+```sh
 pip3 install -e https://github.com/mmarbout/micompleteV2.git@master#egg=@micompleteV2
-‘‘‘
+```
