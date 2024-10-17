@@ -1,10 +1,10 @@
-Metadata-Version: 2.1
+Metadata-Version: 3.1
 Name: micomplete
-Version: 1.1.1
+Version: 2.1.1
 Summary: Quality control of assembled genomes
-Home-page: https://bitbucket.org/evolegiolab/micomplete
-Author: Eric Hugoson
-Author-email: eric@hugoson.org
+Home-page: https://github.com/mmarbout/micompleteV2/
+Author: Martial Marbouty
+Author-email: martial.marbouty@pasteur.fr
 License: GNU General Public License v3 or later (G  PLv3+)
 Keywords: bioinformatics completeness metagenomics
 Classifier: Development Status :: 5 - Production/Stable
@@ -17,7 +17,7 @@ Classifier: Programming Language :: Python :: 3.5
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
 License-File: LICENSE
-Requires-Dist: biopython>=1.53
+Requires-Dist: biopython>=1.80
 Requires-Dist: numpy>=1.13
 Requires-Dist: matplotlib>=2.0.2
 
@@ -25,9 +25,6 @@ Requires-Dist: matplotlib>=2.0.2
 **miComplete**
 ==============
 
-- Eric Hugoson (eric@hugoson.org / hugoson@evolbio.mpg.de / @EricHugo)
-- Lionel Guy (guy.lionel@gmail.com / lionel.guy@imbim.uu.se / @LionelGuy)
- 
 
 Introduction
 ----------------
@@ -40,14 +37,8 @@ in HMM format can be provided to also retrieve completeness and redundancy of th
 weighted versions of completeness and redundancy which can inform the user a bit more of the actual state completeness (see description). Alternatively, the user can calculate new weights for any given set
 of marker genes provided.
 
-miComplete is still in a state of development, bugs may be encountered. Feedback, bug reports, and feature requests are welcome through Bitbucket's
-`issue system <https://bitbucket.org/evolegiolab/micomplete/issues>`_.
-
-miComplete has been used in several publications:
-
-#. [MartijnEtAl_2015]_
-#. [SpangEtAl_2015]_
-#. [MartijnEtAl_2018]_
+miComplete is still in a state of development and this version is just a up-to-date version of the original micoplete package <https://bitbucket.org/evolegiolab/micomplete/> in order to be integrated to the pipeline metator with the correct version of Biopython, bugs may be encountered. Feedback, bug reports, and feature requests are welcome through Bitbucket's
+`issue system <https://github.com/mmarbout/micompleteV2/issues>`_.
 
 
 Description
@@ -99,7 +90,7 @@ If built from the package these will be installed automatically, otherwise can e
 Required
 """"""""""""""""""
 
-- Biopython (>= 1.70) (``$ pip install biopython``)
+- Biopython (>= 1.80) (``$ pip install biopython``)
 - Numpy (>= 1.13.1) (``$ pip install numpy``)
 - Matplotlib (>= 2.0.2) (``$ pip install matplotlib``)
 
@@ -146,15 +137,15 @@ Git
 
 2. Clone the latest version of the repository::
 
-   $ git clone http://bitbucket.org/evolegiolab/micomplete.git
+   $ git clone https://github.com/mmarbout/micompleteV2/
 
 3. Create symlink to some directory in your ``$PATH`` (in this example ``$HOME/bin``)::
 
-   $ cd micomplete
-   $ ls micomplete
-   $ ln -s $(realpath micomplete/micomplete.py) $HOME/bin/miComplete
+   $ cd micompleteV2
+   $ ls micompleteV2
+   $ ln -s $(realpath micompleteV2/micomplete.py) $HOME/bin/miComplete
 
-4. Optionally, add the folder ``micomplete`` in your ``PATH``. The scripts should be kept at their original location.
+4. Optionally, add the folder ``micompleteV2`` in your ``PATH``. The scripts should be kept at their original location.
 
 Usage
 --------------
@@ -265,7 +256,7 @@ This example will also produce the weighted completeness::
 
    $ miComplete test_set.tab --hmms Bact105 --weights Bact105
     ## miComplete
-    ## v1.1.0
+    ## v2.1.0
     ## Weights:	/home/hugoson/.local/lib/python3.7/site-packages/micomplete/share/Bact105.weights
     ## Weights Standard deviation:	0.13917826966028532
     Name	Length	GC-content	Present Markers	Completeness	Redundancy	Weighted completeness	Weighted redundancy	Contigs	CDS	N50	L50	N90	L90	
@@ -282,13 +273,5 @@ Finally we will create our own set of weights given a set of marker genes for wh
 
 Also produces a violin plot of the distribution of weights for each marker gene.
 
-References
-----------------
 
-.. [MartijnEtAl_2015] Martijn J, Schulz F, Zaremba-Niedzwiedzka K, Viklund J, Stepanauskas R, Andersson SG, Horn M, Guy L, Ettema TJG. Single-cell genomics of a rare environmental alphaproteobacterium provides unique insights into Rickettsiaceae evolution. ISME J. 2015 Nov;9(11):2373-85. doi: https://doi.org/10.1038/ismej.2015.46
-
-.. [SpangEtAl_2015] Spang A, Saw JH, Jørgensen SL, Zaremba-Niedzwiedzka K, Martijn J, Lind AE, van Eijk R, Schleper C, Guy L, Ettema TJG. Complex archaea that bridge the gap between prokaryotes and eukaryote. Nature. 2015 May 14;521(7551):173-179. doi: https://doi.org/10.1038/nature14447
-
-.. [MartijnEtAl_2018] Martijn J, Vosseberg J, Guy L, Offre P, Ettema TJG. Deep mitochondrial origin outside the sampled alphaproteobacteria. Nature. 2018 May;557(7703):101-105. doi: https://doi.org/10.1038/s41586-018-0059-5
-	       
 		
