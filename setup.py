@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open('README.rst', mode='r') as f:
     l_description = f.read()
 
-setup(name='micomplete',
+setup(name='micompleteV2',
         version='2.1.1',
         description='Quality control of assembled genomes',
         long_description=l_description,
